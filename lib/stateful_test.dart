@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(LayoutTest());
+void main() => runApp(MyApp());
 
-class LayoutTest extends StatelessWidget {
+class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +34,12 @@ class LayoutTest extends StatelessWidget {
               ],
             ),
           ),
-          Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          Text('41'),
+          FavoriteWidget(),
+//          Icon(
+//            Icons.star,
+//            color: Colors.red[500],
+//          ),
+//          Text('41'),
         ],
       ),
     );
@@ -115,7 +116,52 @@ class LayoutTest extends StatelessWidget {
   }
 }
 
-//class FavoriteWidget extends StatefulWidget {
-//  @override
-//  State<StatefulWidget> createState() => _FavoriteWidgetState();
-//}
+class FavoriteWidget extends StatefulWidget {
+  /// createState() creates State object
+  @override
+  State<StatefulWidget> createState() => _FavoriteWidgetState();
+}
+
+class _FavoriteWidgetState extends State<FavoriteWidget> {
+  bool _isFavorited = true;
+  int _favoriteCount = 41;
+
+  /// creates a row containing a red IconButton and Text
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.all(0),
+          child: IconButton(
+            icon: (_isFavorited ? Icon(Icons.star) : Icon(Icons.star_border)),
+            color: Colors.red[500],
+            onPressed: _toggleFavorite,
+          ),
+        ),
+        /// placing the Text in a SizedBox and setting its width prevents a discernible "jump"
+        /// when the text changes between the values of 40 and 41
+        SizedBox(
+          width: 18,
+          child: Container(
+            child: Text('$_favoriteCount'),
+          ),
+        )
+      ],
+    );
+  }
+
+  void _toggleFavorite() {
+    /// setState() telss the framework that the widget's state has changed and the widget should be redrawn.
+    setState(() {
+      if (_isFavorited) {
+        _favoriteCount -= 1;
+        _isFavorited = false;
+      } else {
+        _favoriteCount += 1;
+        _isFavorited = true;
+      }
+    });
+  }
+}
