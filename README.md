@@ -1,21 +1,21 @@
 # Flutter Study
 <img src="https://flutter.dev/assets/flutter-lockup-c13da9c9303e26b8d5fc208d2a1fa20c1ef47eb021ecadf27046dea04c0cebf6.png" alt="drawing" width="50%"/>
-Flutter 스터디를 위한 참고 자료들
+Reference for Learning Flutter
 
-## 공식문서
-- [https://flutter.dev/](https://flutter.dev/) : Flutter 공식문서
-- [https://dart.dev/](https://dart.dev/) : Dart 공식문서
-- [https://pub.dev/](https://pub.dev/) : Dart 패키지 
+## Official Documentations
+- [https://flutter.dev/](https://flutter.dev/) : Flutter Docs
+- [https://dart.dev/](https://dart.dev/) : Dart Docs
+- [https://pub.dev/](https://pub.dev/) : Dart Packages
 
 ## 참고할 만한 앱
-- [Flutter Gallery](https://play.google.com/store/apps/details?id=io.flutter.demo.gallery) - Flutter UI/디자인 및 소스코드를 확인할 수 있음
-- [Flutter UI Challenge](https://play.google.com/store/apps/details?id=com.popupbits.flutteruichallenges) - Flutter UI/디자인/애니메이션 및 소스코드를 확인할 수 있는 앱
-- [Flutter Awesome Gallery](https://play.google.com/store/apps/details?id=flutter.awesome.gallery) - Flutter UI/디자인/애니메이션 및 소스코드를 확인할 수 있는 앱
-- [Flutter Icon Finder](https://play.google.com/store/apps/details?id=com.tachyonfactory.icon_finder) - 여러 종류의 Flutter 아이콘을 찾을 수 있는 앱
-- [History Of Everything](https://play.google.com/store/apps/details?id=com.twodimensions.timeline) - 플러터로 구현한 애니메이션을 확인할 수 있는 앱
+- [Flutter Gallery](https://play.google.com/store/apps/details?id=io.flutter.demo.gallery) - You can check Flutter's UI/Design and their own source codes.
+- [Flutter UI Challenge](https://play.google.com/store/apps/details?id=com.popupbits.flutteruichallenges) - Flutter's  UI/Design/Animation and their own source codes.
+- [Flutter Awesome Gallery](https://play.google.com/store/apps/details?id=flutter.awesome.gallery) - Flutter UI/Desgin/Animaion and their source codes.
+- [Flutter Icon Finder](https://play.google.com/store/apps/details?id=com.tachyonfactory.icon_finder) - You can find many kinds of Flutter icon resources.
+- [History Of Everything](https://play.google.com/store/apps/details?id=com.twodimensions.timeline) - You can see nice animations made with flutter.
 
 ## 강의
-- [Flutter Boot Camp With Dart](https://www.udemy.com/course/flutter-bootcamp-with-dart/) - Udemy 강의
+- [Flutter Boot Camp With Dart](https://www.udemy.com/course/flutter-bootcamp-with-dart/) - Udemy lecture.
 
 ## 저장소
 - https://github.com/Solido/awesome-flutter
