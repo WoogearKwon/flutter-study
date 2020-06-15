@@ -1,7 +1,7 @@
 # Flutter Study
-![alt flutter](https://flutter.dev/assets/flutter-lockup-c13da9c9303e26b8d5fc208d2a1fa20c1ef47eb021ecadf27046dea04c0cebf6.png)
-
+<img src="https://flutter.dev/assets/flutter-lockup-c13da9c9303e26b8d5fc208d2a1fa20c1ef47eb021ecadf27046dea04c0cebf6.png" alt="drawing" width="50%"/>
 Flutter 스터디를 위한 참고 자료들
+
 ## 공식문서
 - [https://flutter.dev/](https://flutter.dev/) : Flutter 공식문서
 - [https://dart.dev/](https://dart.dev/) : Dart 공식문서
