@@ -16,3 +16,8 @@ Flutter 스터디를 위한 참고 자료들
 
 ## 강의
 - [Flutter Boot Camp With Dart](https://www.udemy.com/course/flutter-bootcamp-with-dart/) - Udemy 강의
+
+## 저장소
+- https://github.com/Solido/awesome-flutter
+- https://github.com/iampawan/FlutterExampleApps
+- https://github.com/2d-inc/HistoryOfEverything
