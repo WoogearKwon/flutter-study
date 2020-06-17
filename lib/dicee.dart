@@ -24,12 +24,12 @@ class DicePage extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Expanded(
-              flex: 1,
-              child: FlatButton(
-                onPressed: () {
-                },
-                child: Image.asset('images/dice1.png'),
-              )),
+            flex: 1,
+            child: FlatButton(
+              onPressed: () {
+              },
+              child: Image.asset('images/dice1.png'),
+            )),
           Expanded(
             flex: 1,
             child: FlatButton(
