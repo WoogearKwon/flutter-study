@@ -26,11 +26,12 @@ class DicePage extends StatefulWidget {
   _DicePageState createState() => _DicePageState();
 }
 
-/// state part which will track and update the screen as the state changese
+/// state part which will track and update the screen as the state changes
 class _DicePageState extends State<DicePage> {
   int leftDiceNumber = 1;
   int rightDiceNumber = 1;
 
+  // made this function to remove repeated codes
   void _updateDiceNumbers() {
     /// setState() trigger a re-build, so that screen will show the updated data
     setState(() {
