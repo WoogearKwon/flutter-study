@@ -10,6 +10,7 @@ class StudyList extends StatelessWidget {
       'MagicBall',
       'To Solidify what you\'ve learnt in the Dicee tutorial',
       Routes.magicBall);
+  final _study4 = Subject('Xylophone', 'To learn how to add package dependencies and to use them', Routes.xylophone);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class StudyList extends StatelessWidget {
       _study1,
       _study2,
       _study3,
-
+      _study4,
     ];
 
     return Scaffold(
