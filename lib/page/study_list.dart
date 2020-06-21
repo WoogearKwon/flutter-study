@@ -4,21 +4,30 @@ import 'package:startupnamer/route/route_generator.dart';
 
 class StudyList extends StatelessWidget {
   final _study1 = Subject('Mi Card',
-      'To Learn How to Build Basic Widget Layout & add Assets', Routes.miCard);
-  final _study2 = Subject('Dicee', 'To Learn Stateful Widget', Routes.dicee);
+      'To learn how to build basic widget layout & add assets', Routes.miCard);
+  final _study2 = Subject('Dicee', 'To learn stateful widget', Routes.dicee);
+  final _study3 = Subject(
+      'MagicBall',
+      'To Solidify what you\'ve learnt in the Dicee tutorial',
+      Routes.magicBall);
 
   @override
   Widget build(BuildContext context) {
-    var list = [_study1, _study2];
+    var list = [
+      _study1,
+      _study2,
+      _study3,
 
-      return Scaffold(
-        appBar: AppBar(
-          title: Text('Study List'),
-        ),
-        body: SafeArea(
-          child: _getList(list),
-        ),
-      );
+    ];
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Study List'),
+      ),
+      body: SafeArea(
+        child: _getList(list),
+      ),
+    );
   }
 
   Widget _getList(List items) {
