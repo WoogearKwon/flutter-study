@@ -1,25 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:startupnamer/dicee.dart';
 import 'package:startupnamer/route/route_generator.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/',
-      onGenerateRoute: RouteGenerator.generateRoute,
-
-      /// removed this line of codes to use 'route_generator.dart' for expandability.
-//      home: MiCard(),
-//      routes: {
-//        '/dicee': (_) => Dicee()
-//      },
-    );
-  }
-}
 
 class MiCard extends StatelessWidget {
   @override
@@ -98,16 +79,6 @@ class MiCard extends StatelessWidget {
                 ),
               ),
             ),
-            RaisedButton(
-              child: Text('Go to Dicee'),
-              onPressed: () {
-                /// Navigator for moving page to another: dicee
-                Navigator.of(context).pushNamed(
-                  '/dicee',
-                  arguments: 'Hello there'
-                ); // named route
-              },
-            )
           ],
         )));
   }

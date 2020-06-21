@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:startupnamer/dicee.dart';
-import 'package:startupnamer/main.dart';
+import 'package:startupnamer/page/magic_8_ball.dart';
+import '../page/pages.dart';
+
+class Routes {
+  static const String root = '/';
+  static const String miCard = '/micard';
+  static const String dicee = '/dicee';
+  static const String magicBall = '/magicball';
+}
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -8,17 +15,14 @@ class RouteGenerator {
     final args = settings.arguments;
 
     switch (settings.name) {
-      case '/':
+      case Routes.root:
+        return MaterialPageRoute(builder: (_) => StudyList());
+      case Routes.miCard:
         return MaterialPageRoute(builder: (_) => MiCard());
-      case '/dicee':
-        if (args is String) {
-          return MaterialPageRoute(
-            builder: (_) => Dicee()
-          );
-        }
-       // If args is not of the correct type, return an error page.
-       // You can also throw an exception while in development.
-        return _errorRoute();
+      case Routes.dicee:
+        return MaterialPageRoute(builder: (_) => Dicee());
+      case Routes.magicBall:
+        return MaterialPageRoute(builder: (_) => MagicEightBall());
       default:
         // If there is no such named route in the switch statement, e.g. / third
         return _errorRoute();
