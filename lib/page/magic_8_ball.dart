@@ -30,14 +30,14 @@ class _BallState extends State<Ball> {
         onPressed: () {
           _updateBallNumber();
         },
-        child: Image.asset('images/ball${ballNumber}.png'),
+        child: Image.asset('images/ball${ballNumber + 1}.png'),
       ),
     );
   }
 
   void _updateBallNumber() {
     setState(() {
-      ballNumber = Random().nextInt(5) + 1;
+      ballNumber = Random().nextInt(5);
     });
   }
 }
