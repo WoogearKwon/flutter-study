@@ -21,6 +21,12 @@ class StudyList extends StatelessWidget {
       Icons.music_note,
       Routes.xylophone);
 
+  final quizzler = Subject(
+      'Quizzler',
+      'fdfdfd',
+      Icons.not_listed_location,
+      Routes.quizzler);
+
   @override
   Widget build(BuildContext context) {
     var list = [
@@ -28,6 +34,7 @@ class StudyList extends StatelessWidget {
       dicee,
       magicball,
       xylophone,
+      quizzler,
     ];
 
     return Scaffold(

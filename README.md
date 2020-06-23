@@ -21,3 +21,6 @@ Reference for Learning Flutter
 - https://github.com/Solido/awesome-flutter
 - https://github.com/iampawan/FlutterExampleApps
 - https://github.com/2d-inc/HistoryOfEverything
+
+## Resources
+- [Material Design Icons](https://material.io/resources/icons/?style=baseline)

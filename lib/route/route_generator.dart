@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:startupnamer/page/magic_8_ball.dart';
 import 'package:startupnamer/page/xylophone.dart';
-import '../page/pages.dart';
+import 'pages.dart';
 
 class Routes {
   static const String root = '/';
@@ -9,6 +9,7 @@ class Routes {
   static const String dicee = '/dicee';
   static const String magicBall = '/magicball';
   static const String xylophone = '/xylophone';
+  static const String quizzler = '/quizzler';
 }
 
 class RouteGenerator {
@@ -27,8 +28,11 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => MagicEightBall());
       case Routes.xylophone:
         return MaterialPageRoute(builder: (_) => Xylophone());
+      case Routes.quizzler:
+        return MaterialPageRoute(builder: (_) => Quizzler());
+
+    // If there is no such named route in the switch statement, e.g. / third
       default:
-        // If there is no such named route in the switch statement, e.g. / third
         return _errorRoute();
     }
   }
