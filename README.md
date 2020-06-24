@@ -14,8 +14,9 @@ Reference for Learning Flutter
 - [Flutter Icon Finder](https://play.google.com/store/apps/details?id=com.tachyonfactory.icon_finder) - You can find many kinds of Flutter icon resources.
 - [History Of Everything](https://play.google.com/store/apps/details?id=com.twodimensions.timeline) - You can check nice animations made by Flutter.
 
-## Lecture
-- [Flutter Boot Camp With Dart](https://www.udemy.com/course/flutter-bootcamp-with-dart/) - Udemy lecture.
+## Lecture / Practice Track
+- [Flutter Boot Camp With Dart](https://www.udemy.com/course/flutter-bootcamp-with-dart/) - Udemy lecture
+- [Exercism](https://exercism.io/my/tracks/dart) - Flutter exercises
 
 ## Repositories
 - https://github.com/Solido/awesome-flutter
