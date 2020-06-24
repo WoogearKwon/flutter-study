@@ -27,4 +27,3 @@ Reference for Learning Flutter
 - [Material Design](https://material.io/)
 - [Material Design Palette](https://www.materialpalette.com/)
 - [Google Fonts](https://fonts.google.com/)
-- 
