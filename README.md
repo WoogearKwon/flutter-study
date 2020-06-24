@@ -24,4 +24,7 @@ Reference for Learning Flutter
 - https://github.com/2d-inc/HistoryOfEverything
 
 ## Resources
-- [Material Design Icons](https://material.io/resources/icons/?style=baseline)
+- [Material Design](https://material.io/)
+- [Material Design Palette](https://www.materialpalette.com/)
+- [Google Fonts](https://fonts.google.com/)
+- 
