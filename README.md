@@ -10,9 +10,9 @@ Reference for Learning Flutter
 ## Apps
 - [Flutter Gallery](https://play.google.com/store/apps/details?id=io.flutter.demo.gallery) - You can check Flutter App's UI/Design and its source codes.
 - [Flutter UI Challenge](https://play.google.com/store/apps/details?id=com.popupbits.flutteruichallenges) - You can check Flutter app's  UI/Design/Animation and its source codes.
-- [Flutter Awesome Gallery](https://play.google.com/store/apps/details?id=flutter.awesome.gallery) - You can check Flutter app's UI/Desgin/Animaion and its source codes.
+- [Flutter Awesome Gallery](https://play.google.com/store/apps/details?id=flutter.awesome.gallery) - You can check Flutter app's UI/Design/Animation and its source codes.
 - [Flutter Icon Finder](https://play.google.com/store/apps/details?id=com.tachyonfactory.icon_finder) - You can find many kinds of Flutter icon resources.
-- [History Of Everything](https://play.google.com/store/apps/details?id=com.twodimensions.timeline) - You can check nice animations made by Flutter.
+- [History Of Everything](https://play.google.com/store/apps/details?id=com.twodimensions.timeline) - You can check nice animations made with Flutter.
 
 ## Lecture / Practice Track
 - [Flutter Boot Camp With Dart](https://www.udemy.com/course/flutter-bootcamp-with-dart/) - Udemy lecture

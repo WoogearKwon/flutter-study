@@ -23,7 +23,7 @@ class StudyList extends StatelessWidget {
 
   final quizzler = Subject(
       'Quizzler',
-      'To learn to use if-else statements and Object Oriented Programming',
+      'To learn how to modularising your code into separate classes(OOP)',
       Icons.not_listed_location,
       Routes.quizzler);
 
