@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../util/quiz_brain.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 QuizBrain quizBrain = QuizBrain();
 
@@ -27,10 +28,31 @@ class QuizPage extends StatefulWidget {
 class _QuizPageState extends State<QuizPage> {
   List<Icon> scoreKeeper = [];
 
-  bool _checkAnswer(bool answer) {
-    var myAnswer = answer == quizBrain.getQuizAnswer();
-    print(myAnswer ? 'you are right! :)' : 'you are wrong :(');
-    return myAnswer;
+  /// check your answer and show its result on below the button
+  void _checkAnswer(bool answer) {
+    setState(() {
+      if (quizBrain.isFinished()) showAlert('Finished', 'You\'ve reached the end of the quiz.');
+      else {
+        bool myAnswer = answer == quizBrain.getQuizAnswer();
+        scoreKeeper.add(myAnswer
+            ? Icon(Icons.check, color: Colors.green,)
+            : Icon(Icons.close, color: Colors.red,));
+
+        quizBrain.nextQuiz();
+      }
+    });
+  }
+
+  void showAlert(String title, String desc) {
+    /// we added this new package in pubspec.yaml
+    Alert(
+      context: context,
+      title: title,
+      desc: desc,
+    ).show();
+
+    quizBrain.reset();
+    scoreKeeper = [];
   }
 
   @override
@@ -43,8 +65,7 @@ class _QuizPageState extends State<QuizPage> {
         _buildSubmitButton('True', Colors.green, true),
         _buildSubmitButton('False', Colors.red, false),
         Row(
-          children: <Widget>[
-          ],
+          children: scoreKeeper
         )
       ],
     );
@@ -83,10 +104,7 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
           onPressed: () {
-            bool myAnswer = _checkAnswer(answer);
-            setState(() {
-              quizBrain.nextQuiz();
-            });
+            _checkAnswer(answer);
           },
         ),
       ),

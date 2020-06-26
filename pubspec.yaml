@@ -16,6 +16,9 @@ dependencies:
 
   audioplayers: ^0.15.1
 
+  # used this package in quizzler when all questions are finished.
+  rflutter_alert: ^1.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

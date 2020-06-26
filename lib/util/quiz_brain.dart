@@ -57,4 +57,12 @@ class QuizBrain {
       _questionNumb++;
     }
   }
+
+  bool isFinished() {
+    return (_questionNumb >= getQuizSize() - 1) ? true : false;
+  }
+
+  void reset() {
+    _questionNumb = 0;
+  }
 }
