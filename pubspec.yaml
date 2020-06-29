@@ -19,6 +19,11 @@ dependencies:
   # used this package in quizzler when all questions are finished.
   rflutter_alert: ^1.0.3
 
+  # used these packages below in Timer project
+  flutter_bloc: ^4.0.0
+  equatable: ^1.0.0
+  wave: ^0.0.8
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

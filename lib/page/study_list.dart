@@ -38,6 +38,12 @@ class StudyList extends StatelessWidget {
       Image.asset('images/icon_destini.png'),
       Routes.destiny);
 
+  final timer = Subject(
+      'Timer',
+      'To learn how to use Bloc Package so that you can separate UI and business logic',
+      Icon(Icons.timer),
+      Routes.timer);
+
   @override
   Widget build(BuildContext context) {
     var list = [
@@ -47,6 +53,7 @@ class StudyList extends StatelessWidget {
       xylophone,
       quizzler,
       destiny,
+      timer,
     ];
 
     return Scaffold(

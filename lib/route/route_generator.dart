@@ -9,6 +9,7 @@ class Routes {
   static const String xylophone = '/xylophone';
   static const String quizzler = '/quizzler';
   static const String destiny = '/destiny';
+  static const String timer = '/timer';
 }
 
 class RouteGenerator {
@@ -31,6 +32,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => Quizzler());
       case Routes.destiny:
         return MaterialPageRoute(builder: (_) => Destini());
+      case Routes.timer:
+        return MaterialPageRoute(builder: (_) => Timer());
 
     // If there is no such named route in the switch statement, e.g. / third
       default:

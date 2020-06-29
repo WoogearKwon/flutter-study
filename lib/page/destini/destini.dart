@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:startupnamer/util/story_brain.dart';
+import 'package:startupnamer/page/destini/story_brain.dart';
 
 /// This is adventure game that you can make choices through scenario given.
 /// Every choice you make leads to different ending.
