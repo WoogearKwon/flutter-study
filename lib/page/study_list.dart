@@ -1,67 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:startupnamer/model/subject.dart';
-import 'package:startupnamer/route/route_generator.dart';
+import 'package:startupnamer/util/my_study_list.dart';
 
 class StudyList extends StatelessWidget {
-  final micard = Subject(
-      'Mi Card: Profile Layout',
-      'To learn how to build basic widget layout & add assets',
-      Icon(
-        Icons.person,
-        size: 30,
-      ),
-      Routes.miCard);
-  final dicee = Subject(
-      'Dicee', 'To learn what stateful widget is',
-      Image.asset('images/icon_dicee.png'),
-      Routes.dicee);
-  final magicball = Subject(
-      'MagicBall: Ask Anything',
-      'To Solidify what you\'ve learnt in the Dicee tutorial',
-      Image.asset('images/icon_magicball.png'),
-      Routes.magicBall);
-  final xylophone = Subject(
-      'Xylophone',
-      'To learn how to add package dependencies and to use them',
-      Image.asset('images/icon_xylophone.png'),
-      Routes.xylophone);
-
-  final quizzler = Subject(
-      'Quizzler: Quiz Game',
-      'To learn how to modularising your code into separate classes(OOP)',
-      Image.asset('images/icon_quizzler.png'),
-      Routes.quizzler);
-
-  final destiny = Subject(
-      'Destini: Adventure Game',
-      'To Solidify what you\'ve learnt from Quizzler to use Dart OOP principles to build a well organized project',
-      Image.asset('images/icon_destini.png'),
-      Routes.destiny);
-
-  final timer = Subject(
-      'Timer',
-      'To learn how to use Bloc Package so that you can separate UI and business logic',
-      Icon(Icons.timer),
-      Routes.timer);
+  MyStudy myStudy = MyStudy();
 
   @override
   Widget build(BuildContext context) {
-    var list = [
-      micard,
-      dicee,
-      magicball,
-      xylophone,
-      quizzler,
-      destiny,
-      timer,
-    ];
 
     return Scaffold(
       appBar: AppBar(
         title: Text('Study List'),
       ),
       body: SafeArea(
-        child: _getList(list),
+        child: _getList(myStudy.getStudyList()),
       ),
     );
   }
