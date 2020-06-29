@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:startupnamer/page/skeleton/skeleton.dart';
 import 'pages.dart';
 
 class Routes {

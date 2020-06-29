@@ -6,3 +6,5 @@ export '../page/magicball/magic_8_ball.dart';
 export '../page/quizzler/quizzler.dart';
 export '../page/destini/destini.dart';
 export '../page/timer/timer.dart';
+export '../page/skeleton/skeleton.dart';
+export '../page/skeleton/input_page.dart';
