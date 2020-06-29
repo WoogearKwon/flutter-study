@@ -49,6 +49,12 @@ class MyStudy {
       Icon(Icons.timer),
       Routes.timer,
     ),
+    Subject(
+      'BMI Calculator: A Beautiful Health App',
+      'Building Flutter UI for Intermediates',
+      Icon(Icons.local_hospital),
+      Routes.skeleton,
+    ),
   ];
 
   List<Subject> getStudyList() => _list;

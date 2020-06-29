@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:startupnamer/page/skeleton/skeleton.dart';
 import 'pages.dart';
 
 class Routes {
@@ -10,6 +11,7 @@ class Routes {
   static const String quizzler = '/quizzler';
   static const String destiny = '/destiny';
   static const String timer = '/timer';
+  static const String skeleton = '/skeleton';
 }
 
 class RouteGenerator {
@@ -19,7 +21,7 @@ class RouteGenerator {
 
     switch (settings.name) {
       case Routes.root:
-        return MaterialPageRoute(builder: (_) => StudyList());
+        return MaterialPageRoute(builder: (_) => StudyListPage());
       case Routes.miCard:
         return MaterialPageRoute(builder: (_) => MiCard());
       case Routes.dicee:
@@ -34,6 +36,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => Destini());
       case Routes.timer:
         return MaterialPageRoute(builder: (_) => Timer());
+      case Routes.skeleton:
+        return MaterialPageRoute(builder: (_) => Skeleton());
 
     // If there is no such named route in the switch statement, e.g. / third
       default:

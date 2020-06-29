@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:startupnamer/model/subject.dart';
 import 'package:startupnamer/util/my_study_list.dart';
 
-class StudyList extends StatelessWidget {
-  MyStudy myStudy = MyStudy();
+class StudyListPage extends StatelessWidget {
+  final MyStudy _myStudy = MyStudy();
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class StudyList extends StatelessWidget {
         title: Text('Study List'),
       ),
       body: SafeArea(
-        child: _getList(myStudy.getStudyList()),
+        child: _getList(_myStudy.getStudyList()),
       ),
     );
   }
