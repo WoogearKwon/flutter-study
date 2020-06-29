@@ -33,6 +33,7 @@ class StoryBrain {
         choice2: '')
   ];
 
+  /// Download the story plan here: https://drive.google.com/uc?export=download&id=1KU6EghkO9Hf2hRM0756xFHgNaZyGCou3
   Map<int, Map<int, int>> _choicesPlan = {
     0: {1: 2, 2: 1},
     2: {1: 5, 2: 4},
@@ -60,7 +61,6 @@ class StoryBrain {
     _storyNumber = 0;
   }
 
-  //Download the story plan here: https://drive.google.com/uc?export=download&id=1KU6EghkO9Hf2hRM0756xFHgNaZyGCou3
   void nextStory(int choiceNumber) {
     if (endStoriesBranch.contains(_storyNumber)) {
       restart();
@@ -71,7 +71,7 @@ class StoryBrain {
     print('User choosen $choiceNumber redirecting to story $_storyNumber');
   }
 
-  bool buttonShouldBeVisibe() {
+  bool buttonShouldBeVisible() {
     return (_storyNumber <= 2) ? true : false;
   }
 }

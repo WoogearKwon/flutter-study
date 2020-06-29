@@ -52,7 +52,7 @@ class _StoryPageState extends State<StoryPage> {
               Expanded(
                 flex: 2,
                 child: Visibility(
-                  visible: _storyBrain.buttonShouldBeVisibe(),
+                  visible: _storyBrain.buttonShouldBeVisible(),
                   child: FlatButton(
                     onPressed: () {
                       //Choice 1 made by user.
@@ -76,7 +76,7 @@ class _StoryPageState extends State<StoryPage> {
               Expanded(
                 flex: 2,
                 child: Visibility(
-                  visible: _storyBrain.buttonShouldBeVisibe(),
+                  visible: _storyBrain.buttonShouldBeVisible(),
                   child: FlatButton(
                     onPressed: () {
                       //Choice 2 made by user.
