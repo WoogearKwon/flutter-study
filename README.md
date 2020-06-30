@@ -27,5 +27,5 @@ Reference for Learning Flutter
 - [Material Design](https://material.io/)
 - [Material Design Palette](https://www.materialpalette.com/)
 - [Google Fonts](https://fonts.google.com/)
-- [Dribbble](https://dribbble.com/) - Finding creative design works and get some insight
+- [Dribbble](https://dribbble.com/) - Finding creative design works and get insight
 - [ColorZilla](https://www.colorzilla.com) - Color picker
