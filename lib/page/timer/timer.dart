@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -56,7 +55,7 @@ class TimerPage extends StatelessWidget {
               ),
               BlocBuilder<TimerBloc, TimerState>(
                 condition: (previousState, state) =>
-                state.runtimeType != previousState.runtimeType,
+                  state.runtimeType != previousState.runtimeType,
                 builder: (context, state) => Actions(),
               ),
             ],
@@ -78,9 +77,7 @@ class Actions extends StatelessWidget {
     );
   }
 
-  List<Widget> _mapStateToActionButton({
-    TimerBloc timerBloc,
-  }) {
+  List<Widget> _mapStateToActionButton({TimerBloc timerBloc}) {
     final TimerState currentState = timerBloc.state;
     if (currentState is TimerInitial) {
       return [
@@ -91,6 +88,7 @@ class Actions extends StatelessWidget {
         )
       ];
     }
+
     if (currentState is TimerRunInProgress) {
       return [
         FloatingActionButton(
@@ -103,6 +101,7 @@ class Actions extends StatelessWidget {
         ),
       ];
     }
+
     if (currentState is TimerRunPause) {
       return [
         FloatingActionButton(
@@ -115,6 +114,7 @@ class Actions extends StatelessWidget {
         ),
       ];
     }
+
     if (currentState is TimerRunComplete) {
       return [
         FloatingActionButton(
@@ -123,6 +123,7 @@ class Actions extends StatelessWidget {
         ),
       ];
     }
+
     return [];
   }
 }
