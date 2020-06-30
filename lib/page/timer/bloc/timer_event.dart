@@ -12,6 +12,7 @@ abstract class TimerEvent extends Equatable {
 
   @override
   List<Object> get props => [];
+
 }
 
 class TimerStarted extends TimerEvent {
@@ -35,7 +36,6 @@ class TimerTicked extends TimerEvent {
   const TimerTicked({@required this.duration});
 
   @override
-  // TODO: implement props
   List<Object> get props => [duration];
 
   @override

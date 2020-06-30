@@ -29,3 +29,7 @@ Reference for Learning Flutter
 - [Google Fonts](https://fonts.google.com/)
 - [Dribbble](https://dribbble.com/) - Finding creative design works and get insight
 - [ColorZilla](https://www.colorzilla.com) - Color picker
+
+## Packages
+- [Bloc](https://bloclibrary.dev/#/) or [Bloc Official Page](https://bloclibrary.dev/#/) - Business Logic Component
+- [Equatable](https://pub.dev/packages/equatable) - Helps implement equality without boilerplate code

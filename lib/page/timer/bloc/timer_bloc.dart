@@ -8,7 +8,7 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
   final Ticker _ticker;
   final int _duration = 60;
 
-  StreamSubscription<int> _tickerSubsription;
+  StreamSubscription<int> _tickerSubscription;
 
 
   TimerBloc({@required Ticker ticker}) : assert(ticker != null), _ticker = ticker ;
@@ -33,14 +33,14 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
 
   @override
   Future<void> close() {
-    _tickerSubsription?.cancel();
+    _tickerSubscription?.cancel();
     return super.close();
   }
 
   Stream<TimerState> _mapTimerStartedToState(TimerStarted start) async* {
     yield TimerRunInProgress(start.duration);
-    _tickerSubsription?.cancel();
-    _tickerSubsription = _ticker
+    _tickerSubscription?.cancel();
+    _tickerSubscription = _ticker
     .tick(ticks: start.duration)
     .listen((duration) => add(TimerTicked(duration: duration)));
   }
@@ -51,20 +51,20 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
 
   Stream<TimerState> _mapTimerPausedState(TimerPaused pause) async* {
     if (state is TimerRunInProgress) {
-      _tickerSubsription?.pause();
+      _tickerSubscription?.pause();
       yield TimerRunPause(state.duration);
     }
   }
 
   Stream<TimerState> _mapTimerResumedToState(TimerResumed resume) async* {
     if (state is TimerRunPause) {
-      _tickerSubsription?.resume();
+      _tickerSubscription?.resume();
       yield TimerRunInProgress(state.duration);
     }
   }
 
   Stream<TimerState> _mapTimerResetToState(TimerReset reset) async* {
-    _tickerSubsription?.cancel();
+    _tickerSubscription?.cancel();
     yield TimerInitial(_duration);
   }
 }
