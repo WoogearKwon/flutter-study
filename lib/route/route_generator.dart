@@ -1,42 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:startupnamer/page/skeleton/calculate_brain.dart';
 import 'pages.dart';
 
 class Routes {
-  static const String root = '/';
-  static const String miCard = '/micard';
-  static const String dicee = '/dicee';
-  static const String magicBall = '/magicball';
-  static const String xylophone = '/xylophone';
-  static const String quizzler = '/quizzler';
-  static const String destiny = '/destiny';
-  static const String timer = '/timer';
-  static const String skeleton = '/skeleton';
+  static const String kRoot = '/';
+  static const String kMiCard = '/micard';
+  static const String kDicee = '/dicee';
+  static const String kMagicBall = '/magicball';
+  static const String kXylophone = '/xylophone';
+  static const String kQuizzler = '/quizzler';
+  static const String kDestiny = '/destiny';
+  static const String kTimer = '/timer';
+  static const String kSkeleton = '/skeleton';
+  static const String kCalculator = '/calculator';
 }
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    // Getting arguments possed in while calling Navigator.pushNa ed
+    // Getting arguments passed in while calling Navigator.pushNamed
     final args = settings.arguments;
 
     switch (settings.name) {
-      case Routes.root:
+      case Routes.kRoot:
         return MaterialPageRoute(builder: (_) => StudyListPage());
-      case Routes.miCard:
+      case Routes.kMiCard:
         return MaterialPageRoute(builder: (_) => MiCard());
-      case Routes.dicee:
+      case Routes.kDicee:
         return MaterialPageRoute(builder: (_) => Dicee());
-      case Routes.magicBall:
+      case Routes.kMagicBall:
         return MaterialPageRoute(builder: (_) => MagicEightBall());
-      case Routes.xylophone:
+      case Routes.kXylophone:
         return MaterialPageRoute(builder: (_) => Xylophone());
-      case Routes.quizzler:
+      case Routes.kQuizzler:
         return MaterialPageRoute(builder: (_) => Quizzler());
-      case Routes.destiny:
+      case Routes.kDestiny:
         return MaterialPageRoute(builder: (_) => Destini());
-      case Routes.timer:
+      case Routes.kTimer:
         return MaterialPageRoute(builder: (_) => Timer());
-      case Routes.skeleton:
+      case Routes.kSkeleton:
         return MaterialPageRoute(builder: (_) => Skeleton());
+      case Routes.kCalculator:
+        if (args is CalculatorBrain)
+          return MaterialPageRoute(builder: (_) => ResultsPage(calc: args,));
+        return _errorRoute();
 
     // If there is no such named route in the switch statement, e.g. / third
       default:

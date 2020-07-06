@@ -1,4 +1,4 @@
-export '../page/study_list.dart';
+export '../page/study_list_page.dart';
 export '../page/mi_card/mi_card.dart';
 export '../page/dicee/dicee.dart';
 export '../page/xylophone/xylophone.dart';
@@ -7,4 +7,5 @@ export '../page/quizzler/quizzler.dart';
 export '../page/destini/destini.dart';
 export '../page/timer/timer.dart';
 export '../page/skeleton/skeleton.dart';
-export '../page/skeleton/input_page.dart';
+export '../page/skeleton/screens/input_page.dart';
+export '../page/skeleton/screens/result_page.dart';

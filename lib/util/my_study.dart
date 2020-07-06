@@ -3,7 +3,7 @@ import '../route/route_generator.dart';
 import '../model/subject.dart';
 
 class MyStudy {
-  List<Subject> _list = [
+  static List<Subject> list = [
     Subject(
       'Mi Card: Profile Layout',
       'To learn how to build basic widget layout & add assets',
@@ -11,51 +11,49 @@ class MyStudy {
         Icons.person,
         size: 30,
       ),
-      Routes.miCard,
+      Routes.kMiCard,
     ),
     Subject(
       'Dicee',
       'To learn what stateful widget is',
       Image.asset('images/icon_dicee.png'),
-      Routes.dicee,
+      Routes.kDicee,
     ),
     Subject(
       'MagicBall: Ask Anything',
       'To Solidify what you\'ve learnt in the Dicee tutorial',
       Image.asset('images/icon_magicball.png'),
-      Routes.magicBall,
+      Routes.kMagicBall,
     ),
     Subject(
       'Xylophone',
       'To learn how to add package dependencies and to use them',
       Image.asset('images/icon_xylophone.png'),
-      Routes.xylophone,
+      Routes.kXylophone,
     ),
     Subject(
       'Quizzler: Quiz Game',
       'To learn how to modularising your code into separate classes(OOP)',
       Image.asset('images/icon_quizzler.png'),
-      Routes.quizzler,
+      Routes.kQuizzler,
     ),
     Subject(
       'Destini: Adventure Game',
       'To Solidify what you\'ve learnt from Quizzler to use Dart OOP principles to build a well organized project',
       Image.asset('images/icon_destini.png'),
-      Routes.destiny,
+      Routes.kDestiny,
     ),
     Subject(
       'Timer(Using Bloc)',
       'To learn how to use Bloc Package so that you can separate UI and business logic',
       Icon(Icons.timer),
-      Routes.timer,
+      Routes.kTimer,
     ),
     Subject(
       'BMI Calculator: A Beautiful Health App',
       'Building Flutter UI for Intermediates',
       Icon(Icons.local_hospital),
-      Routes.skeleton,
+      Routes.kSkeleton,
     ),
   ];
-
-  List<Subject> getStudyList() => _list;
 }

@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:startupnamer/model/subject.dart';
-import 'package:startupnamer/util/my_study_list.dart';
+import 'package:startupnamer/util/my_study.dart';
 
 class StudyListPage extends StatelessWidget {
-  final MyStudy _myStudy = MyStudy();
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Study List'),
       ),
       body: SafeArea(
-        child: _getList(_myStudy.getStudyList()),
+        child: _getList(MyStudy.list),
       ),
     );
   }
