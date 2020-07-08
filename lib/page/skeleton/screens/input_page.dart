@@ -217,7 +217,7 @@ class _InputPageState extends State<InputPage> {
               onTap: () {
                 CalculatorBrain calc =
                     CalculatorBrain(height: height, weight: weight);
-                Navigator.of(context).pushNamed(Routes.kCalculator, arguments: calc);
+                Navigator.of(context).pushNamed(Routes.kBMICalculator, arguments: calc);
               },
             )
           ],

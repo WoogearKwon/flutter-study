@@ -12,7 +12,8 @@ class Routes {
   static const String kDestiny = '/destiny';
   static const String kTimer = '/timer';
   static const String kSkeleton = '/skeleton';
-  static const String kCalculator = '/calculator';
+  static const String kBMICalculator = '/calculator';
+  static const String kClima = '/clima';
 }
 
 class RouteGenerator {
@@ -39,10 +40,12 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => Timer());
       case Routes.kSkeleton:
         return MaterialPageRoute(builder: (_) => Skeleton());
-      case Routes.kCalculator:
+      case Routes.kBMICalculator:
         if (args is CalculatorBrain)
           return MaterialPageRoute(builder: (_) => ResultsPage(calc: args,));
         return _errorRoute();
+      case Routes.kClima:
+        return MaterialPageRoute(builder: (_) => Clima());
 
     // If there is no such named route in the switch statement, e.g. / third
       default:

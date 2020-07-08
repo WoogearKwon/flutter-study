@@ -16,15 +16,18 @@ dependencies:
 
   audioplayers: ^0.15.1
 
-  # used this package in quizzler when all questions are finished.
+  # use this package in quizzler when all questions are finished.
   rflutter_alert: ^1.0.3
 
-  # used these packages below in Timer project
+  # use these packages below in Timer project
   flutter_bloc: ^4.0.0
   equatable: ^1.0.0
   wave: ^0.0.8
 
   font_awesome_flutter: ^8.8.1
+
+  # used this package in Clima (Angela used 3.0.1 in the lecture)
+  geolocator: ^5.3.2+2
 
 dev_dependencies:
   flutter_test:
@@ -46,3 +49,8 @@ flutter:
     - family: Source Sans Pro
       fonts:
         - asset: fonts/SourceSansPro-Regular.ttf
+
+    - family: Spartan MB
+      fonts:
+        - asset: fonts/SpartanMB-Black.otf
+          weight: 900

@@ -3,9 +3,9 @@
 Reference for Learning Flutter
 
 ## To run this app in your device
-- You need to click <Edit configurations..> and add New Configuration of Flutter
+- You need to click **Edit configurations..** and add New Configuration of Flutter
 - and specify Dart entrypoint as: lib/page/main.dart
-- and don't forget to click "Pub get" at pubspec.yaml
+- and don't forget to click "Pub get" at pubspec.yaml to get dependencies
 
 ## Official Documentations
 - [https://flutter.dev/](https://flutter.dev/) : Flutter Docs
@@ -13,9 +13,9 @@ Reference for Learning Flutter
 - [https://pub.dev/](https://pub.dev/) : Dart Packages
 
 ## Apps
-- [Flutter Gallery](https://play.google.com/store/apps/details?id=io.flutter.demo.gallery) - You can check Flutter App's UI/Design and its source codes.
-- [Flutter UI Challenge](https://play.google.com/store/apps/details?id=com.popupbits.flutteruichallenges) - You can check Flutter app's  UI/Design/Animation and its source codes.
-- [Flutter Awesome Gallery](https://play.google.com/store/apps/details?id=flutter.awesome.gallery) - You can check Flutter app's UI/Design/Animation and its source codes.
+- [Flutter Gallery](https://play.google.com/store/apps/details?id=io.flutter.demo.gallery) - You can check Flutter App's UI/Design and its source code.
+- [Flutter UI Challenge](https://play.google.com/store/apps/details?id=com.popupbits.flutteruichallenges) - You can check Flutter app's  UI/Design/Animation and its source code.
+- [Flutter Awesome Gallery](https://play.google.com/store/apps/details?id=flutter.awesome.gallery) - You can check Flutter app's UI/Design/Animation and its source code.
 - [Flutter Icon Finder](https://play.google.com/store/apps/details?id=com.tachyonfactory.icon_finder) - You can find many kinds of Flutter icon resources.
 - [History Of Everything](https://play.google.com/store/apps/details?id=com.twodimensions.timeline) - You can check nice animations made with Flutter.
 

@@ -39,21 +39,27 @@ class MyStudy {
     ),
     Subject(
       'Destini: Adventure Game',
-      'To Solidify what you\'ve learnt from Quizzler to use Dart OOP principles to build a well organized project',
+      'To solidify what you\'ve learnt from Quizzler to use Dart OOP principles to build a well organized project',
       Image.asset('images/icon_destini.png'),
       Routes.kDestiny,
     ),
     Subject(
-      'Timer(Using Bloc)',
+      'Timer(Using Bloc package)',
       'To learn how to use Bloc Package so that you can separate UI and business logic',
       Icon(Icons.timer),
       Routes.kTimer,
     ),
     Subject(
       'BMI Calculator: A Beautiful Health App',
-      'Building Flutter UI for Intermediates',
+      'Building Flutter UI for intermediates',
       Icon(Icons.local_hospital),
       Routes.kSkeleton,
+    ),
+    Subject(
+      'Clima: Weather App',
+      'To learn asynchronous programming in Dart and to understand async, await, Future and networking',
+      Image.asset('images/icon_clima.png'),
+      Routes.kClima,
     ),
   ];
 }
