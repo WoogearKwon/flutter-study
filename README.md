@@ -2,6 +2,11 @@
 <img src="https://flutter.dev/assets/flutter-lockup-c13da9c9303e26b8d5fc208d2a1fa20c1ef47eb021ecadf27046dea04c0cebf6.png" alt="drawing" width="50%"/>
 Reference for Learning Flutter
 
+## To run this app in your device
+- You need to click <Edit configurations..> and add New Configuration of Flutter
+- and specify Dart entrypoint as: lib/page/main.dart
+- and don't forget to click "Pub get" at pubspec.yaml
+
 ## Official Documentations
 - [https://flutter.dev/](https://flutter.dev/) : Flutter Docs
 - [https://dart.dev/](https://dart.dev/) : Dart Docs
