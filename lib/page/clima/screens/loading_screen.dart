@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import '../services/location.dart';
-import '../services/networking.dart';
-
-// you can get your own api key from here: https://home.openweathermap.org/
-const apiKey = 'fb4673cd5fa5a71484fabd0b64b30dea';
+import 'package:startupnamer/route/route_generator.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import '../services/weather.dart';
 
 class LoadingScreen extends StatefulWidget {
   @override
@@ -22,15 +20,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   void getLocationData() async {
-    Location location = Location();
-    await location.getCurrentLocation();
-    latitude = location.latitude;
-    longitude = location.longitude;
+    var weatherData = await WeatherModel().getLocationWeather();
 
-    // request data with your latitude,longitude and apiKey
-    NetworkHelper networkHelper = NetworkHelper('https://api.openweathermap.org/data/2.5/onecall?lat=$latitude&lon=$longitude&exclude=hourly,daily&appid=$apiKey');
-
-    var weatherData = await networkHelper.getData();
+    Navigator.of(context).pushNamed(Routes.kLocation, arguments: weatherData);
   }
 
   // build() gets called when widgets gets build onto the screen,
@@ -40,6 +32,10 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return Scaffold(
       backgroundColor: Color(0xFF0A0E21),
       body: Center(
+        child: SpinKitWave(
+          color: Colors.white,
+          size: 100.0,
+        ),
       ),
     );
   }

@@ -12,8 +12,10 @@ class Routes {
   static const String kDestiny = '/destiny';
   static const String kTimer = '/timer';
   static const String kSkeleton = '/skeleton';
-  static const String kBMICalculator = '/calculator';
+  static const String kBMICalculator = '/skeleton/calculator';
   static const String kClima = '/clima';
+  static const String kLocation = '/clima/location';
+  static const String kCity = '/clima/location/city';
 }
 
 class RouteGenerator {
@@ -24,28 +26,44 @@ class RouteGenerator {
     switch (settings.name) {
       case Routes.kRoot:
         return MaterialPageRoute(builder: (_) => StudyListPage());
+
       case Routes.kMiCard:
         return MaterialPageRoute(builder: (_) => MiCard());
+
       case Routes.kDicee:
         return MaterialPageRoute(builder: (_) => Dicee());
+
       case Routes.kMagicBall:
         return MaterialPageRoute(builder: (_) => MagicEightBall());
+
       case Routes.kXylophone:
         return MaterialPageRoute(builder: (_) => Xylophone());
+
       case Routes.kQuizzler:
         return MaterialPageRoute(builder: (_) => Quizzler());
+
       case Routes.kDestiny:
         return MaterialPageRoute(builder: (_) => Destini());
+
       case Routes.kTimer:
         return MaterialPageRoute(builder: (_) => Timer());
+
       case Routes.kSkeleton:
         return MaterialPageRoute(builder: (_) => Skeleton());
+
       case Routes.kBMICalculator:
         if (args is CalculatorBrain)
           return MaterialPageRoute(builder: (_) => ResultsPage(calc: args,));
         return _errorRoute();
+
       case Routes.kClima:
         return MaterialPageRoute(builder: (_) => Clima());
+
+      case Routes.kLocation:
+        return MaterialPageRoute(builder: (_) => LocationScreen(locationWeather: args,));
+
+      case Routes.kCity:
+        return MaterialPageRoute(builder: (_) => CityScreen());
 
     // If there is no such named route in the switch statement, e.g. / third
       default:

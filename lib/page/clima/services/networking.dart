@@ -15,10 +15,6 @@ class NetworkHelper {
       // jsonDecode() is of Flutter packaged called convert that parses json data
       var decodedData = jsonDecode(data);
 
-      var temp = decodedData['current']['temp'];
-      var condition = decodedData['current']['weather'][0]['id'];
-      var cityName = decodedData['timezone'];
-
       return decodedData;
     } else {
       print(response.statusCode);

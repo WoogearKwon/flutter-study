@@ -10,3 +10,5 @@ export '../page/skeleton/skeleton.dart';
 export '../page/skeleton/screens/input_page.dart';
 export '../page/skeleton/screens/result_page.dart';
 export '../page/clima/clima.dart';
+export '../page/clima/screens/location_screen.dart';
+export '../page/clima/screens/city_screen.dart';
