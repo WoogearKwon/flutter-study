@@ -38,3 +38,6 @@ Reference for Learning Flutter
 ## Packages
 - [Bloc](https://bloclibrary.dev/#/) or [Bloc Official Page](https://bloclibrary.dev/#/) - Business Logic Component
 - [Equatable](https://pub.dev/packages/equatable) - Helps implement equality without boilerplate code
+- [Geolocator](https://pub.dev/packages/geolocator) - A Flutter geolocation plugin which provides easy access to platform specific location services
+- [Http](https://pub.dev/packages/http) - A composable, Future-based library for making HTTP requests
+- [SpinKit](https://pub.dev/packages/flutter_spinkit) - A collection of loading indicators animated with flutter
