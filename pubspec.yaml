@@ -26,8 +26,10 @@ dependencies:
 
   font_awesome_flutter: ^8.8.1
 
-  # used this package in Clima (Angela used 3.0.1 in the lecture)
+  # use this package in Clima (Angela used 3.0.1 in the lecture)
   geolocator: ^5.3.2+2
+  # use this package for network request
+  http: ^0.12.1
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
+import '../services/location.dart';
+import '../services/networking.dart';
+
+// you can get your own api key from here: https://home.openweathermap.org/
+const apiKey = 'fb4673cd5fa5a71484fabd0b64b30dea';
 
 class LoadingScreen extends StatefulWidget {
   @override
@@ -7,26 +11,26 @@ class LoadingScreen extends StatefulWidget {
 }
 
 class _LoadingScreenState extends State<LoadingScreen> {
-
-  void getLocation() async {
-    // LocationAccuracy: more accurate the location you're trying to get, the more battery intensive it will be
-    // async keyword gives us access to await keyword which awaits time-consuming work to be done before continuing next line of code
-    // make sure that your device's GPS is on
-    try {
-      Position position = await Geolocator()
-          .getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
-      print(position);
-    } catch (e) {
-      print(e);
-    }
-  }
+  double latitude;
+  double longitude;
 
   // initState() only gets called once at the state gets initialized gets created.
   @override
   void initState() {
     super.initState();
+    getLocationData();
+  }
 
-    getLocation();
+  void getLocationData() async {
+    Location location = Location();
+    await location.getCurrentLocation();
+    latitude = location.latitude;
+    longitude = location.longitude;
+
+    // request data with your latitude,longitude and apiKey
+    NetworkHelper networkHelper = NetworkHelper('https://api.openweathermap.org/data/2.5/onecall?lat=$latitude&lon=$longitude&exclude=hourly,daily&appid=$apiKey');
+
+    var weatherData = await networkHelper.getData();
   }
 
   // build() gets called when widgets gets build onto the screen,
@@ -36,13 +40,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return Scaffold(
       backgroundColor: Color(0xFF0A0E21),
       body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            //Get the current location
-            getLocation();
-          },
-          child: Text('Get Location'),
-        ),
       ),
     );
   }
