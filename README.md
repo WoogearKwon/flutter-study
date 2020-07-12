@@ -1,6 +1,10 @@
-# Flutter Study
+# Let's study Flutter
 <img src="https://flutter.dev/assets/flutter-lockup-c13da9c9303e26b8d5fc208d2a1fa20c1ef47eb021ecadf27046dea04c0cebf6.png" alt="drawing" width="50%"/>
-Reference for Learning Flutter
+Flutter Demo App and Reference for Learning Flutter
+
+## Environment
+- IDE: Android Studio 3.6.3
+- Test Devices: Galaxy Note 10, Galaxy Note FE, Galaxy Edge 6 plus
 
 ## To run this app in your device
 - You need to click **Edit configurations..** and add New Configuration of Flutter
