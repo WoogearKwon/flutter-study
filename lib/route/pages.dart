@@ -12,3 +12,4 @@ export '../page/skeleton/screens/result_page.dart';
 export '../page/clima/clima.dart';
 export '../page/clima/screens/location_screen.dart';
 export '../page/clima/screens/city_screen.dart';
+export '../page/bitcoin/bit_coin.dart';

@@ -61,5 +61,11 @@ class MyStudy {
       Image.asset('images/icon_clima.png'),
       Routes.kClima,
     ),
+    Subject(
+      'Bitcoin Ticker: Crypto Currency Price Checking App',
+      'To learn about using Cupertino and Material Widgets',
+      Image.asset('images/icon_coin.png'),
+      Routes.kBitCoin,
+    ),
   ];
 }

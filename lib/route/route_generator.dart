@@ -16,6 +16,7 @@ class Routes {
   static const String kClima = '/clima';
   static const String kLocation = '/clima/location';
   static const String kCity = '/clima/location/city';
+  static const String kBitCoin = '/bitcoin';
 }
 
 class RouteGenerator {
@@ -64,6 +65,9 @@ class RouteGenerator {
 
       case Routes.kCity:
         return MaterialPageRoute(builder: (_) => CityScreen());
+
+      case Routes.kBitCoin:
+        return MaterialPageRoute(builder: (_) => BitCoin());
 
     // If there is no such named route in the switch statement, e.g. / third
       default:
