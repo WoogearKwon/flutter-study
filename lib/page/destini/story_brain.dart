@@ -35,7 +35,7 @@ class StoryBrain {
 
   /// Download the story plan here: https://drive.google.com/uc?export=download&id=1KU6EghkO9Hf2hRM0756xFHgNaZyGCou3
   /// We made plan data as a Map type so that we don't need to write a bunch of if-else statements.
-  /// I got this idea from here: https://github.com/londonappbrewery/destini-challenge-completed/commit/69ed867992fc05f13a4fbef452173a956312993d#commitcomment-34876417
+  /// I've got this idea from here: https://github.com/londonappbrewery/destini-challenge-completed/commit/69ed867992fc05f13a4fbef452173a956312993d#commitcomment-34876417
   Map<int, Map<int, int>> _choicesPlan = {
     0: {1: 2, 2: 1},
     2: {1: 5, 2: 4},

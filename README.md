@@ -1,5 +1,5 @@
 # Let's study Flutter
-<img src="https://flutter.dev/assets/flutter-lockup-c13da9c9303e26b8d5fc208d2a1fa20c1ef47eb021ecadf27046dea04c0cebf6.png" alt="drawing" width="50%"/>
+<img src="https://flutter.dev/assets/flutter-lockup-1caf6476beed76adec3c477586da54de6b552b2f42108ec5bc68dc63bae2df75.png" alt="drawing" width="50%"/>
 Flutter Demo App and Reference for Learning Flutter
 
 ## Environment
