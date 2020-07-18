@@ -62,7 +62,7 @@ class MyStudy {
       Routes.kClima,
     ),
     Subject(
-      'Bitcoin Ticker: Crypto Currency Price Checking App',
+      'Bitcoin Ticker: Crypto Currency Price Checking App (API KEY NEEDED)',
       'To learn about using Cupertino and Material Widgets',
       Image.asset('images/icon_coin.png'),
       Routes.kBitCoin,
