@@ -67,5 +67,11 @@ class MyStudy {
       Image.asset('images/icon_coin.png'),
       Routes.kBitCoin,
     ),
+    Subject(
+      'Flash Chat: Modern Messaging App',
+      'To learn incorporate Firebase into your app, to crate beautiful animation, etc',
+      Image.asset('images/icon_flash_chat.png'),
+      Routes.kFlashChat,
+    ),
   ];
 }

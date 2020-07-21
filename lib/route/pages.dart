@@ -13,3 +13,4 @@ export '../page/clima/clima.dart';
 export '../page/clima/screens/location_screen.dart';
 export '../page/clima/screens/city_screen.dart';
 export '../page/bitcoin/bit_coin.dart';
+export '../page/flashchat/flash_chat.dart';
