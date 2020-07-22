@@ -6,6 +6,9 @@ Flutter Demo App and Reference for Learning Flutter
 - IDE: Android Studio 3.6.3
 - Test Devices: Galaxy Note 10, Galaxy Note FE, Galaxy Edge 6 plus
 
+## Screenshots
+<img src="images/screenshot.jpg" alt="drawing" width="50%"/>
+
 ## To run this app in your device
 - You need to click **Edit configurations..** and add New Configuration of Flutter
 - and specify Dart entrypoint as: lib/page/main.dart
