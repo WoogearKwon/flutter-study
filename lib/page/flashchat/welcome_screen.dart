@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:startupnamer/route/route_generator.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -43,6 +44,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: MaterialButton(
                   onPressed: () {
                     //Go to login screen.
+                    Navigator.of(context).pushNamed(Routes.kChatLogin);
                   },
                   minWidth: 200.0,
                   height: 42.0,
@@ -61,6 +63,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: MaterialButton(
                   onPressed: () {
                     //Go to registration screen.
+                    Navigator.of(context).pushNamed(Routes.kChatRegistration);
                   },
                   minWidth: 200.0,
                   height: 42.0,

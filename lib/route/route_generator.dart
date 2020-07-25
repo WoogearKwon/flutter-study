@@ -18,6 +18,8 @@ class Routes {
   static const String kCity = '/clima/location/city';
   static const String kBitCoin = '/bitcoin';
   static const String kFlashChat = '/flashChat';
+  static const String kChatLogin = '/flashChat/login';
+  static const String kChatRegistration = '/flashChat/registration';
 }
 
 class RouteGenerator {
@@ -72,6 +74,12 @@ class RouteGenerator {
 
       case Routes.kFlashChat:
         return MaterialPageRoute(builder: (_) => FlashChat());
+
+      case Routes.kChatLogin:
+        return MaterialPageRoute(builder: (_) => LoginScreen());
+
+      case Routes.kChatRegistration:
+        return MaterialPageRoute(builder: (_) => RegistrationScreen());
 
     // If there is no such named route in the switch statement, e.g. / third
       default:
