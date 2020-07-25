@@ -19,9 +19,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           children: <Widget>[
             Row(
               children: <Widget>[
-                Container(
-                  child: Image.asset('images/logo_flash_chat.png'),
-                  height: 60.0,
+                // Hero animation widget which has same tag of login screen and registration screen.
+                // It makes the logo to move to the center with its increasing size.
+                Hero(
+                  tag: 'logo',
+                  child: Container(
+                    child: Image.asset('images/logo_flash_chat.png'),
+                    height: 60.0,
+                  ),
                 ),
                 Text(
                   'Flash Chat',
