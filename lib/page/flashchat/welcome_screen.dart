@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:startupnamer/route/route_generator.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -73,9 +74,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                     height: 60.0,
                   ),
                 ),
-                Text(
-                  'Flash Chat',
-                  style: TextStyle(
+                /// check docs: [https://pub.dev/packages/animated_text_kit]
+                /// makes texts to be animated like type writing
+                TypewriterAnimatedTextKit(
+                  text: ['Flash Chat'],
+                  speed: Duration(milliseconds: 500),
+                  totalRepeatCount: 2,
+                  textStyle: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
                   ),

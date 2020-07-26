@@ -32,6 +32,8 @@ dependencies:
   http: ^0.12.1
   # loading icons
   flutter_spinkit: "^4.1.2"
+  # packaged flutter animation
+  animated_text_kit: "^2.2.0"
 
 dev_dependencies:
   flutter_test:
