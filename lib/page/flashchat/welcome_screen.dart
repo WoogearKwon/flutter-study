@@ -6,11 +6,55 @@ class WelcomeScreen extends StatefulWidget {
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+/// note: we add SingleTickerProviderStateMixin with the 'with' keyword.
+/// We can use multiple mixins to add a capabilities.
+class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProviderStateMixin {
+
+  AnimationController controller;
+  Animation animation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    controller = AnimationController(
+      duration: Duration(seconds: 1), // makes animation work in 1 second
+      vsync: this,
+//      upperBound: 100 // default value is 1.0 if you wouldn't specify it
+    );
+
+    /// to add a curve effect on our animation
+    /// check here [https://api.flutter.dev/flutter/animation/Curves-class.html] to find more animation curves
+//    animation = CurvedAnimation(
+//      parent: controller,
+//      curve: Curves.decelerate, // decelerate speed
+//    );
+
+    /// see how easy to implement animation in flutter!
+    animation = ColorTween(
+      begin: Colors.blueGrey,
+      end: Colors.white
+    ).animate(controller);
+
+    controller.forward(); // starts animation forwards
+
+    controller.addListener(() { // controller.value changes 0.0 to 100.0 for 1 second
+      setState(() { // updates UI when gets new value
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+//      backgroundColor: Colors.white,
+      backgroundColor: animation.value,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -25,6 +69,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo_flash_chat.png'),
+//                    height: animation.value * 100,
                     height: 60.0,
                   ),
                 ),
