@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:startupnamer/page/flashchat/component/rounded_button.dart';
 import 'package:startupnamer/route/route_generator.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -90,43 +91,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
             SizedBox(
               height: 48.0,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                elevation: 5.0,
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.circular(30.0),
-                child: MaterialButton(
-                  onPressed: () {
-                    //Go to login screen.
-                    Navigator.of(context).pushNamed(Routes.kChatLogin);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Log In',
-                  ),
-                ),
-              ),
+            RoundedButton(
+              color: Colors.lightBlueAccent,
+              title: 'Log in',
+              onPress: () {
+                //Go to login screen.
+                Navigator.of(context).pushNamed(Routes.kChatLogin);
+              },
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Colors.blueAccent,
-                borderRadius: BorderRadius.circular(30.0),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    //Go to registration screen.
-                    Navigator.of(context).pushNamed(Routes.kChatRegistration);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Register',
-                  ),
-                ),
-              ),
+            RoundedButton(
+              color: Colors.blueAccent,
+              title: 'Register',
+              onPress: () {
+                //Go to registration screen.
+                Navigator.of(context).pushNamed(Routes.kChatRegistration);
+              },
             ),
           ],
         ),
