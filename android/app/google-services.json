@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "615156395624",
+    "firebase_url": "https://flash-chat-c650d.firebaseio.com",
+    "project_id": "flash-chat-c650d",
+    "storage_bucket": "flash-chat-c650d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615156395624:android:8b63094f175534ae9a95dd",
+        "android_client_info": {
+          "package_name": "com.woogear.kwon.flutter_study"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615156395624-5p9j9acijg4nuh7uttjgv0r5imc3i7gb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzmOOlHZP_tz-nD5fnXB7ZVc2uSLEtTQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615156395624-5p9j9acijg4nuh7uttjgv0r5imc3i7gb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
