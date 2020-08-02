@@ -8,7 +8,7 @@ Flutter Demo App and Reference for Learning Flutter
 
 I didn't test iOS devices enough so there might be some bugs..
 
-Also Note: There's some issue with the iOS Firebase implementation what I'm fixing it.
+Also Note: An issue with the iOS Firebase implementation is should to be fixed
 
 ## Screenshots
 <img src="images/screenshot.jpg" alt="drawing" width="50%"/>
