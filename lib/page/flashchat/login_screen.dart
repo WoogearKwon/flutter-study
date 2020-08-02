@@ -23,18 +23,21 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Form(
           key: _formKey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              _buildLogo(), // Hero animation widget which has same tag of Welcome screen logo
-              SizedBox(height: 48.0,),
-              _buildEmailField(),
-              SizedBox(height: 8.0,),
-              _buildPasswordField(),
-              SizedBox(height: 24.0,),
-              _buildLoginButton(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                SizedBox(height: 80.0,),
+                _buildLogo(), // Hero animation widget which has same tag of Welcome screen logo
+                SizedBox(height: 48.0,),
+                _buildEmailField(),
+                SizedBox(height: 8.0,),
+                _buildPasswordField(),
+                SizedBox(height: 24.0,),
+                _buildLoginButton(),
+              ],
+            ),
           ),
         ),
       ),
