@@ -16,3 +16,4 @@ export '../page/bitcoin/bit_coin.dart';
 export '../page/flashchat/flash_chat.dart';
 export '../page/flashchat/login_screen.dart';
 export '../page/flashchat/registration_screen.dart';
+export '../page/flashchat/chat_screen.dart';

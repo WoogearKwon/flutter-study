@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:startupnamer/page/flashchat/component/rounded_button.dart';
+import 'package:startupnamer/route/route_generator.dart';
 import 'package:startupnamer/util/constants.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -8,6 +10,10 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final _auth = FirebaseAuth.instance;
+  String _email;
+  String _password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,8 +36,10 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 48.0,
             ),
             TextField(
+              textAlign: TextAlign.center,
+              keyboardType: TextInputType.emailAddress,
               onChanged: (value) {
-                //Do something with the user input.
+                _email = value;
               },
               decoration: kTextFieldDecoration.copyWith(
                   hintText: 'Enter your email'
@@ -41,8 +49,10 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 8.0,
             ),
             TextField(
+              textAlign: TextAlign.center,
+              obscureText: true,
               onChanged: (value) {
-                //Do something with the user input.
+                _password = value;
               },
               decoration: kTextFieldDecoration.copyWith(
                   hintText: 'Enter your password'
@@ -54,8 +64,16 @@ class _LoginScreenState extends State<LoginScreen> {
             RoundedButton(
               color: Colors.lightBlueAccent,
               title: 'Log In',
-              onPress: () {
-                //Implement login functionality.
+              onPress: () async {
+                try {
+                  final user = await _auth.signInWithEmailAndPassword(email: _email, password: _password);
+
+                  if (user != null) {
+                    Navigator.of(context).pushNamed(Routes.kChatScreen);
+                  }
+                } catch (e) {
+                  print(e);
+                }
               },
             ),
           ],

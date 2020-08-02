@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:startupnamer/page/flashchat/chat_screen.dart';
 import 'package:startupnamer/page/skeleton/calculate_brain.dart';
 import 'pages.dart';
 
@@ -20,6 +21,7 @@ class Routes {
   static const String kFlashChat = '/flashChat';
   static const String kChatLogin = '/flashChat/login';
   static const String kChatRegistration = '/flashChat/registration';
+  static const String kChatScreen = '/flashChat/chat_screen';
 }
 
 class RouteGenerator {
@@ -80,6 +82,9 @@ class RouteGenerator {
 
       case Routes.kChatRegistration:
         return MaterialPageRoute(builder: (_) => RegistrationScreen());
+
+      case Routes.kChatScreen:
+        return MaterialPageRoute(builder: (_) => ChatScreen());
 
     // If there is no such named route in the switch statement, e.g. / third
       default:
