@@ -5,8 +5,10 @@ Flutter Demo App and Reference for Learning Flutter
 ## Environment
 - IDE: Android Studio 3.6.3
 - Test Devices: Galaxy Note 10, Galaxy Note FE, Galaxy Edge 6 plus
+
 I didn't test iOS devices enough so there might be some bugs..
-Also Note: There's some issue with the iOS Firebase implementation, and I'm fixing it.
+
+Also Note: There's some issue with the iOS Firebase implementation what I'm fixing it.
 
 ## Screenshots
 <img src="images/screenshot.jpg" alt="drawing" width="50%"/>
