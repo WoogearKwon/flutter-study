@@ -8,7 +8,7 @@ Flutter Demo App and Reference for Learning Flutter
 
 I didn't test iOS devices enough so there might be some bugs..
 
-Also Note: An issue with the iOS Firebase implementation is should to be fixed
+Also Note: An issue with the iOS Firebase implementation should be fixed
 
 ## Screenshots
 <img src="images/screenshot.jpg" alt="drawing" width="50%"/>
@@ -47,12 +47,12 @@ Also Note: An issue with the iOS Firebase implementation is should to be fixed
 - [ColorZilla](https://www.colorzilla.com) - Color picker
 
 ## Packages
-- [Bloc](https://bloclibrary.dev/#/) or [Bloc Official Page](https://bloclibrary.dev/#/) - Business Logic Component
+- [Bloc](https://bloclibrary.dev/#/), [Bloc Official Page](https://bloclibrary.dev/#/) - Business Logic Component
 - [Equatable](https://pub.dev/packages/equatable) - Helps implement equality without boilerplate code
 - [Geolocator](https://pub.dev/packages/geolocator) - A Flutter geolocation plugin which provides easy access to platform specific location services
 - [Http](https://pub.dev/packages/http) - A composable, Future-based library for making HTTP requests
 - [SpinKit](https://pub.dev/packages/flutter_spinkit) - A collection of loading indicators animated with flutter
-- [Animated Text Kit(https://pub.dev/packages/animated_text_kit) - A Flutter package which contains a collection of some cool and awesome text animations
+- [Animated Text Kit](https://pub.dev/packages/animated_text_kit) - A Flutter package which contains a collection of some cool and awesome text animations
 - [Firebase Core](https://pub.dev/packages/firebase_core) - A Flutter plugin to use the Firebase Core API
 - [Firebase Auth](https://pub.dev/packages/firebase_auth) - A Flutter plugin to use the Firebase Auth API
 - [Cloud Firestore](https://pub.dev/packages/cloud_firestore) - A Flutter plugin to use the Cloud Firestore API
