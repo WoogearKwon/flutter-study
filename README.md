@@ -1,14 +1,16 @@
 # Let's study Flutter
 <img src="https://flutter.dev/assets/flutter-lockup-1caf6476beed76adec3c477586da54de6b552b2f42108ec5bc68dc63bae2df75.png" alt="drawing" width="50%"/>
 Flutter Demo App and Reference for Learning Flutter
+플러터 공부 기록과 데모 앱 저장소
 
 ## Environment
 - IDE: Android Studio 3.6.3
 - Test Devices: Galaxy Note 10, Galaxy Note FE, Galaxy Edge 6 plus
 
-I didn't test iOS devices enough so there might be some bugs..
-
-Also Note: An issue with the iOS Firebase implementation should be fixed
+## Note
+- I didn't test iOS devices enough so there might be some bugs..
+- iOS는 테스트를 충분히 하지 않았기 때문에 버그가 있을 수 있습니다.
+- An issue with the iOS Firebase implementation should be fixed
 
 ## Screenshots
 <img src="images/screenshot.jpg" alt="drawing" width="50%"/>
@@ -23,7 +25,7 @@ Also Note: An issue with the iOS Firebase implementation should be fixed
 - [https://dart.dev/](https://dart.dev/) : Dart Docs
 - [https://pub.dev/](https://pub.dev/) : Dart Packages
 
-## Apps
+## Check these Apps
 - [Flutter Gallery](https://play.google.com/store/apps/details?id=io.flutter.demo.gallery) - You can check Flutter App's UI/Design and its source code.
 - [Flutter UI Challenge](https://play.google.com/store/apps/details?id=com.popupbits.flutteruichallenges) - You can check Flutter app's  UI/Design/Animation and its source code.
 - [Flutter Awesome Gallery](https://play.google.com/store/apps/details?id=flutter.awesome.gallery) - You can check Flutter app's UI/Design/Animation and its source code.
