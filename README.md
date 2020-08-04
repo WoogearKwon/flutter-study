@@ -10,8 +10,7 @@ Flutter Demo App and Reference for Learning Flutter
 
 ## Note
 - I didn't test iOS devices enough so there might be some bugs..
-
-iOS는 테스트를 충분히 하지 않았기 때문에 버그가 있을 수 있습니다.
+- iOS는 테스트를 충분히 하지 않았기 때문에 버그가 있을 수 있습니다.
 - An issue with the iOS Firebase implementation should be fixed
 
 ## Screenshots
