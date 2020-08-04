@@ -1,6 +1,7 @@
 # Let's study Flutter
 <img src="https://flutter.dev/assets/flutter-lockup-1caf6476beed76adec3c477586da54de6b552b2f42108ec5bc68dc63bae2df75.png" alt="drawing" width="50%"/>
 Flutter Demo App and Reference for Learning Flutter
+
 플러터 공부 기록과 데모 앱 저장소
 
 ## Environment
@@ -9,7 +10,8 @@ Flutter Demo App and Reference for Learning Flutter
 
 ## Note
 - I didn't test iOS devices enough so there might be some bugs..
-- iOS는 테스트를 충분히 하지 않았기 때문에 버그가 있을 수 있습니다.
+
+iOS는 테스트를 충분히 하지 않았기 때문에 버그가 있을 수 있습니다.
 - An issue with the iOS Firebase implementation should be fixed
 
 ## Screenshots
