@@ -17,3 +17,4 @@ export '../page/flashchat/flash_chat.dart';
 export '../page/flashchat/login_screen.dart';
 export '../page/flashchat/registration_screen.dart';
 export '../page/flashchat/chat_screen.dart';
+export '../page/todoey/todoey.dart';

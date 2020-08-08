@@ -73,5 +73,11 @@ class MyStudy {
       Image.asset('images/icon_flash_chat.png'),
       Routes.kFlashChat,
     ),
+    Subject(
+      'Todoey: To-Do List App',
+      'To learn how to manage Flutter state',
+      Icon(Icons.assignment),
+      Routes.kTodoey,
+    ),
   ];
 }
