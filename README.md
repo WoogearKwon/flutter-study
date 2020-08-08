@@ -38,6 +38,7 @@ Flutter Demo App and Reference for Learning Flutter
 - [Exercism](https://exercism.io/my/tracks/dart) - Flutter exercises
 
 ## Repositories
+- https://github.com/londonappbrewery/Flutter-Course-Resources
 - https://github.com/Solido/awesome-flutter
 - https://github.com/iampawan/FlutterExampleApps
 - https://github.com/2d-inc/HistoryOfEverything
