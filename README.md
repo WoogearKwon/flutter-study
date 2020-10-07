@@ -16,7 +16,7 @@ Flutter Demo App and Reference for Learning Flutter
 ## Screenshots
 <img src="images/screenshot.jpg" alt="drawing" width="50%"/>
 
-## To run this app in your device
+## To run this app on your device
 - Once you cloned this project, you need to add New Configuration of Flutter at **Edit configurations**
 - and specify Dart entrypoint as: lib/page/main.dart
 - Don't forget to click "Pub get" at pubspec.yaml to get dependencies
