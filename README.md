@@ -9,7 +9,7 @@ Flutter Demo App and Reference for Learning Flutter
 - Test Devices: Galaxy Note 10, Galaxy Note FE, Galaxy Edge 6 plus
 
 ## Note
-- I didn't test iOS devices enough so there might be some bugs..
+- I didn't test the app on iOS devices enough so there might be some bugs..
 - iOS는 테스트를 충분히 하지 않았기 때문에 버그가 있을 수 있습니다.
 - An issue with the iOS Firebase implementation should be fixed
 
