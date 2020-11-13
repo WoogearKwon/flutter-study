@@ -52,7 +52,10 @@ class MyStudy {
     Subject(
       'BMI Calculator: A Beautiful Health App',
       'Building Flutter UI for intermediates',
-      Icon(Icons.local_hospital),
+      Icon(
+        Icons.local_hospital,
+        color: Colors.green,
+      ),
       Routes.kSkeleton,
     ),
     Subject(
@@ -76,8 +79,20 @@ class MyStudy {
     Subject(
       'Todoey: To-Do List App',
       'To learn how to manage Flutter state',
-      Icon(Icons.assignment),
+      Icon(
+        Icons.assignment,
+        color: Colors.blueAccent,
+      ),
       Routes.kTodoey,
+    ),
+    Subject(
+      'Platform Channels',
+      'Writing custom platform specific code for passing messages between Flutter and platform (Android/iOS)',
+      Icon(
+        Icons.auto_awesome,
+        color: Colors.pink,
+      ),
+      Routes.kPlatformChannel,
     ),
   ];
 }
