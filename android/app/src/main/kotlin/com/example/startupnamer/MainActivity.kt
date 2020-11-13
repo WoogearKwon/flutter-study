@@ -11,11 +11,12 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 
 class MainActivity: FlutterActivity() {
-    private val CHANNEL = "channel.names.must.be.unique"
+    private val CHANNEL_BATTERY = "samples.flutter.dev/battery"
+    private val CHANNEL_NAME = "samples.flutter.dev/name"
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
-        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL).setMethodCallHandler {
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL_BATTERY).setMethodCallHandler {
             //Note: this method is invoked on the main thread.
             call, result ->
 
@@ -27,17 +28,28 @@ class MainActivity: FlutterActivity() {
                 } else {
                     result.error("UNAVAILABLE", "Battery level not available.", null)
                 }
+
+            } else if (call.method == "getPlatformName") {
+                result.success("Android")
+
             } else {
                 result.notImplemented()
+            }
+        }
+
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL_NAME).setMethodCallHandler {
+            call, result ->
+            if (call.method == "getPlatformName") {
+                result.success("Android")
             }
         }
     }
 
     private fun getBatteryLevel(): Int {
         val batteryLevel: Int
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        batteryLevel = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val batteryManager = getSystemService(Context.BATTERY_SERVICE) as BatteryManager
-            batteryLevel = batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
+            batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
         } else {
             val intent = ContextWrapper(applicationContext)
                     .registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
@@ -45,7 +57,7 @@ class MainActivity: FlutterActivity() {
             val batteryValue = intent!!.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) * 100
             val batteryScale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
 
-            batteryLevel = batteryValue / batteryScale
+            batteryValue / batteryScale
         }
 
         return batteryLevel
