@@ -61,3 +61,4 @@ Flutter Demo App and Reference for Learning Flutter
 - [Firebase Auth](https://pub.dev/packages/firebase_auth) - A Flutter plugin to use the Firebase Auth API
 - [Cloud Firestore](https://pub.dev/packages/cloud_firestore) - A Flutter plugin to use the Cloud Firestore API
 - [Modal Progress Hud](https://pub.dev/packages/modal_progress_hud) - A simple widget wrapper to enable modal progress HUD
+- [Provider](https://pub.dev/packages/provider) - A Wrapper around InheritedWidget to make them easier to use and more reusable
