@@ -23,19 +23,10 @@ class TasksScreen extends StatelessWidget {
               isScrollControlled: true,
               builder: (context) => SingleChildScrollView(
                 child: Container(
-                  padding: EdgeInsets.only(
-                    bottom: MediaQuery.of(context).viewInsets.bottom
-                  ),
-                  child: AddTaskScreen(
-                    (newTaskTitle) {
-                      // setState(() {
-                      //   tasks.add(Task(name: newTaskTitle));
-                      // });
-                      Navigator.pop(context);
-                    }
-                  ),
-                ),
-              )
+                  padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+                  child: AddTaskScreen(),
+                )
+              ),
           );
         },
       ),
@@ -81,10 +72,11 @@ class TasksScreen extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20))
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  topRight: Radius.circular(20.0),
+                ),
               ),
               child: TasksList(),
             ),
