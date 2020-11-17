@@ -12,7 +12,6 @@ import io.flutter.plugin.common.MethodChannel
 
 class MainActivity: FlutterActivity() {
     private val CHANNEL_BATTERY = "samples.flutter.dev/battery"
-    private val CHANNEL_NAME = "samples.flutter.dev/name"
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
@@ -34,13 +33,6 @@ class MainActivity: FlutterActivity() {
 
             } else {
                 result.notImplemented()
-            }
-        }
-
-        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL_NAME).setMethodCallHandler {
-            call, result ->
-            if (call.method == "getPlatformName") {
-                result.success("Android")
             }
         }
     }

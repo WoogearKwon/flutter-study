@@ -12,7 +12,6 @@ class PlatformChannel extends StatefulWidget {
 class _PlatformChannelState extends State<PlatformChannel> {
   // All channel names used in a single app must be unique
   static const batteryPlatform = const MethodChannel('samples.flutter.dev/battery');
-  static const namePlatform = const MethodChannel('samples.flutter.dev/name');
 
   // Get the battery level.
   String _batteryLevel = 'Unknown battery level.';
@@ -77,7 +76,7 @@ class _PlatformChannelState extends State<PlatformChannel> {
     String platformName;
 
     try {
-      final String result = await namePlatform.invokeMethod('getPlatformName');
+      final String result = await batteryPlatform.invokeMethod('getPlatformName');
       platformName = 'This is $result platform.';
     } on PlatformException catch (e) {
       platformName = 'Failed to get platform name: ${e.message}';
