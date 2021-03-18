@@ -24,6 +24,7 @@ class Routes {
   static const String kChatScreen = '/flashChat/chat_screen';
   static const String kTodoey = '/todoey';
   static const String kPlatformChannel = '/platform_channel';
+  static const String kBottomSheetTest = '/bottom_sheep';
 }
 
 class RouteGenerator {
@@ -93,6 +94,9 @@ class RouteGenerator {
 
       case Routes.kPlatformChannel:
         return MaterialPageRoute(builder: (_) => PlatformChannel());
+
+      case Routes.kBottomSheetTest:
+        return MaterialPageRoute(builder: (_) => BottomSheetTestScreen());
 
     // If there is no such named route in the switch statement, e.g. / third
       default:

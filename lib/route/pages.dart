@@ -19,3 +19,4 @@ export '../page/flashchat/registration_screen.dart';
 export '../page/flashchat/chat_screen.dart';
 export '../page/todoey/todoey.dart';
 export '../page/platform_channel/PlatformChannel.dart';
+export '../page/bottom_sheet/stateful_bottom_sheet.dart';

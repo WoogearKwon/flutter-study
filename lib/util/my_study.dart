@@ -94,5 +94,14 @@ class MyStudy {
       ),
       Routes.kPlatformChannel,
     ),
+    Subject(
+      'Bottom Sheet',
+      'bottom sheet state controlling test',
+      Icon(
+        Icons.ac_unit,
+        color: Colors.pink,
+      ),
+      Routes.kBottomSheetTest,
+    ),
   ];
 }
