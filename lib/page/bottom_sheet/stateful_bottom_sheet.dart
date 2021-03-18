@@ -6,25 +6,43 @@ class BottomSheetTestScreen extends StatefulWidget {
 }
 
 class _BottomSheetTestScreenState extends State<BottomSheetTestScreen> {
+  var _currentNumber = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: MaterialButton(
-          color: Colors.lightBlueAccent,
-          child: Text('bottom sheet'),
-          onPressed: () {
-
-            final builder = AppBottomSheetBuilder(context);
-            _showBottomSheet(builder);
-          },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              _currentNumber.toString(),
+              style: TextStyle(
+                fontSize: 60,
+                color: Colors.blue,
+              ),
+            ),
+            MaterialButton(
+              color: Colors.lightBlueAccent,
+              child: Text('bottom sheet'),
+              onPressed: () {
+                final builder = AppBottomSheetBuilder(context);
+                _showBottomSheet(builder);
+              },
+            ),
+          ],
         ),
       ),
     );
   }
 
   void _showBottomSheet(AppBottomSheetBuilder builder) {
-    final bs = StatefulAppBottomSheet._(builder);
+    final bs = StatefulAppBottomSheet._(builder, (number) {
+      print('received value = $number}');
+      setState(() {
+        _currentNumber = number;
+      });
+    });
     bs.show();
   }
 }
@@ -32,8 +50,9 @@ class _BottomSheetTestScreenState extends State<BottomSheetTestScreen> {
 class StatefulAppBottomSheet {
   var number = 1;
   AppBottomSheetBuilder _builder;
+  void Function(int) _callback;
 
-  StatefulAppBottomSheet._(this._builder);
+  StatefulAppBottomSheet._(this._builder, this._callback);
 
   void show() {
     showModalBottomSheet(
@@ -49,9 +68,10 @@ class StatefulAppBottomSheet {
         return StatefulBuilder(
           builder: (BuildContext context, StateSetter setModalState) {
             return WillPopScope(
-              onWillPop: _builder.isDismissible != null && !_builder.isDismissible
-                  ? () => Future(() => false)
-                  : null,
+              onWillPop:
+                  _builder.isDismissible != null && !_builder.isDismissible
+                      ? () => Future(() => false)
+                      : null,
               child: _AppBottomSheetWidget._(
                 // widget: _builder.widget,
                 widget: Padding(
@@ -59,18 +79,30 @@ class StatefulAppBottomSheet {
                   child: MaterialButton(
                     onPressed: () {
                       setModalState(() {
-                        number+=1;
+                        number += 1;
                         print('number = $number!');
                       });
                     },
                     child: Center(
-                      child: Container(
-                          child: Text(
-                            'Continuous Number = $number',
+                      child: Column(
+                        children: [
+                          Text(
+                            'CLICK this Number = $number',
                             style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 20,
                             ),
-                          )),
+                          ),
+                          SizedBox(height: 10),
+                          MaterialButton(
+                            color: Colors.green,
+                            child: Text('submit number'),
+                            onPressed: () {
+                              _callback(number);
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -106,9 +138,9 @@ class AppBottomSheetBuilder {
     _onCancel = callback;
   }
 
-  StatefulAppBottomSheet build() {
-    return StatefulAppBottomSheet._(this);
-  }
+// StatefulAppBottomSheet build() {
+//   return StatefulAppBottomSheet._(this);
+// }
 }
 
 class _AppBottomSheetWidget extends StatelessWidget {

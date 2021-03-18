@@ -95,8 +95,8 @@ class MyStudy {
       Routes.kPlatformChannel,
     ),
     Subject(
-      'Bottom Sheet',
-      'bottom sheet state controlling test',
+      'Stateful Bottom Sheet',
+      'Building bottom sheet with controlling state',
       Icon(
         Icons.ac_unit,
         color: Colors.pink,
